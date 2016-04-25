@@ -60,16 +60,16 @@ if (!file.exists("UCI HAR Dataset")) {
         names(subject_data) <- "subjectId"
         #construct final dataset
         final_data <- cbind(subject_data,Y_data,X_data)
-        #save dataset in csv file
-        write.csv(final_data, file = "mean_std_data.csv")
+        #save dataset in text file
+        write.table(final_data, "mean_std_data.txt", row.name=FALSE)
         
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
         
         fn <- function(x) colMeans(x[, 3:68])
         #find mean of each variable for each activity
         tidy_data <- ddply(final_data, .(subjectId, activityName), fn )
-        #save data in csv
-        write.csv(tidy_data, file = "tidy_data.csv")
+        #save data in text file
+        write.table(tidy_data, "tidy_data.txt", row.name=FALSE)
         
         
         
