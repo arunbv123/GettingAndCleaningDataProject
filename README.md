@@ -21,5 +21,5 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ## Output
-The output of the experiment is stored in mean_std_data.csv and tidy_data.csv files. The descriptions of the variables in the csv file is given in CodeBook.md file.
+The output of the experiment is stored in mean_std_data.txt and tidy_data.txt files. The descriptions of the variables in the csv file is given in CodeBook.md file.
 
